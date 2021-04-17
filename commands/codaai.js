@@ -1,5 +1,5 @@
 const Discord = require("discord.js")
-const config = require("../config.json")
+const config = require("../prefix.json")
 const {
   Worker, isMainThread, parentPort, workerData
 } = require('worker_threads');
