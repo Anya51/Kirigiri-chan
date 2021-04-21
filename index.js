@@ -11,7 +11,8 @@ const config = require("./prefix.json")
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
-/\n/g
+
+
 client.on('message', msg => {
   if (!msg.content.toLowerCase().startsWith(config.prefix)) return
   if (msg.content.toLowerCase().match(/\n/g)){ 
@@ -34,5 +35,5 @@ client.on('message', msg => {
 
 });
 
-client.login(process.env['TOKEN'])
+client.login(process.env['TOKEN'])	
 
