@@ -1,9 +1,9 @@
 import express from 'express'
 import Discord from 'discord.js'
 
-client = new Discord.Client()
+client = new Discord.Client
 
-app = express()
+app = express
 app.listen process.env.PORT
 
 import config from '../prefix.json'
@@ -13,11 +13,11 @@ client.on('ready', () ->
 );
 
 client.on('message', (msg) ->
-    if (!msg.content.toLowerCase().startsWith(config.prefix))
+    if  !msg.content.toLowerCase().startsWith config.prefix
         return
-    if (msg.content.toLowerCase().match(/\n/g))
-        msg.channel.send("O Kirigiri-chan ainda não possui suporte a múltiplos comandos")
-    args = msg.content.trim().slice(config.prefix.length).split(/ +/g)
+    if  msg.content.toLowerCase().match /\n/g
+        msg.channel.send 'O Kirigiri-chan ainda não possui suporte a múltiplos comandos'
+    args = msg.content.trim().slice(config.prefix.length).split (/ +/g)
     command = args.shift().toLowerCase()
     try
         commandFile = require "./commands/#{command}.coffee"
@@ -27,4 +27,3 @@ client.on('message', (msg) ->
 )
 
 client.login process.env['TOKEN']
-console.log 'hi'
