@@ -1,9 +1,9 @@
 import express from 'express'
 import Discord from 'discord.js'
 
-client = new Discord.Client
+client = new Discord.Client()
 
-app = express
+app = express()
 app.listen process.env.PORT
 
 import config from '../prefix.json'
