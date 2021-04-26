@@ -1,5 +1,9 @@
 import express from 'express'
 import Discord from 'discord.js'
+import dotenv from 'dotenv'
+
+if (process.env.NODE_ENV isnt 'production')
+  dotenv.config()
 
 client = new Discord.Client()
 
@@ -8,7 +12,7 @@ app.listen process.env.PORT
 
 import config from '../prefix.json'
 
-client.on('ready', () -> 
+client.on('ready', () ->
   console.log "Logged in as #{client.user.tag}!"
 );
 

@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "coffee --compile --transpile --output ./dist ./src",
-    "start": "npm run build && node dist"
+    "start": "npm run build && NODE_ENV=production node dist",
+    "develop": "npm run build && NODE_ENV=develop node dist"
   },
   "keywords": [],
   "author": "",
@@ -18,5 +19,8 @@
     "coffeescript": "^2.5.1",
     "discord.js": "^12.5.3",
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0"
   }
 }
