@@ -20,7 +20,7 @@ client.on('message', (msg) ->
     args = msg.content.trim().slice(config.prefix.length).split (/ +/g)
     command = args.shift().toLowerCase()
     try
-        commandFile = require "./commands/#{command}.coffee"
+        commandFile = require "./commands/#{command}.js"
         commandFile.run client, msg, args
     catch err
         console.log err
