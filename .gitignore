@@ -1,3 +1,4 @@
 node_modules/
-dist/commands/index.js
+dist/
 .env
+package-lock.json
