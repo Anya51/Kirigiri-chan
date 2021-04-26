@@ -18,9 +18,8 @@
     "@babel/preset-env": "^7.13.15",
     "coffeescript": "^2.5.1",
     "discord.js": "^12.5.3",
-    "express": "^4.17.1"
-  },
-  "devDependencies": {
+    "express": "^4.17.1",
     "dotenv": "^8.2.0"
-  }
+  },
+  "devDependencies": {}
 }
