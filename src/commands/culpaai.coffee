@@ -3,6 +3,9 @@ Discord = require 'discord.js'
 module.exports.run = (client, msg, args) ->
     sayMessage = args.join ' '
     if args.length == 0
+       if !a.startsWith '<@'
+                msg.channel.send 'Comando Inválido'
+                return
         msg.channel.send "Você é o culpado #{msg.author}" + sayMessage
         return
     else if args.length > 1
