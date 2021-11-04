@@ -6,11 +6,7 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "build": "coffee --compile --transpile --output ./dist ./src",
-        "start": "yarn build && NODE_ENV=production node dist",
-        "develop": "yarn build && NODE_ENV=develop node dist",
-        "lint": "eslint 'src/**/*.coffee'",
-        "lint-fix": "eslint --fix 'src/**/*.coffee'",
-        "prettier": "prettier"
+        "start": "yarn build && node dist"
     },
     "keywords": [],
     "author": "",

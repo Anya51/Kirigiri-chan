@@ -4,7 +4,13 @@
         "paths": {
             "@": [
                 "/*"
-            ]
+            ],
+            "@config": [
+                "./config"
+            ],
+            "@config/*": [
+                "./config/*",
+            ],
         }
     },
     "exclude": [
