@@ -16,7 +16,10 @@
                 "root": [
                     "./src"
                 ],
-                "alias": {},
+                "alias": {
+                    "@src": "./src",
+                    "@config": "./src/config"
+                },
                 "extensions": ".coffee"
             }
         ]

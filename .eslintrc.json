@@ -18,8 +18,13 @@
         "module-resolver"
     ],
     "parser": "eslint-plugin-coffee",
+    "parserOptions": {
+        "sourceType": "module",
+        "ecmaVersion": 12
+    },
     "rules": {
         "no-use-before-define": "off",
+        "coffee/vars-on-top": "off",
         "module-resolver/use-alias": 2,
         "import-helpers/order-imports": [
             "warn",
