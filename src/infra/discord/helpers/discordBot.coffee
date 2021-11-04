@@ -20,7 +20,7 @@ export DiscordBotHelper =
                 .split(/ +/g)
             command = args.shift().toLowerCase()
             try
-                commandFile = require """./commands/#{command}.js"""
+                commandFile = require "../../../commands/#{command}.js"
                 commandFile.run bot, msg, args
             catch err
                 console.log err
