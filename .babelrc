@@ -1,4 +1,24 @@
-{ 
-  "presets": ["@babel/env"],
-  "plugins": ["@babel/transform-runtime"]
+{
+    "presets": [
+        [
+            "@babel/env",
+            {
+                "targets": {
+                    "node": "current"
+                }
+            }
+        ]
+    ],
+    "plugins": [
+        [
+            "module-resolver",
+            {
+                "root": [
+                    "./src"
+                ],
+                "alias": {},
+                "extensions": ".coffee"
+            }
+        ]
+    ]
 }
