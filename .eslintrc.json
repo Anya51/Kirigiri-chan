@@ -1,0 +1,49 @@
+{
+    "env": {
+        "node": true,
+        "es2021": true
+    },
+    "extends": [
+        "standard",
+        "plugin:coffee/import",
+        "plugin:coffee/prettier",
+        "plugin:coffee/disable-incompatible",
+        "plugin:coffee/eslint-recommended",
+        "plugin:coffee/prettier-run-as-rule"
+    ],
+    "plugins": [
+        "coffee",
+        "import",
+        "import-helpers",
+        "module-resolver"
+    ],
+    "parser": "eslint-plugin-coffee",
+    "parserOptions": {
+        "sourceType": "module",
+        "ecmaVersion": 12
+    },
+    "rules": {
+        "no-use-before-define": "off",
+        "coffee/vars-on-top": "off",
+        "module-resolver/use-alias": 2,
+        "import-helpers/order-imports": [
+            "warn",
+            {
+                "newlinesBetween": "always",
+                "groups": [
+                    "module",
+                    "/^@shared/",
+                    [
+                        "parent",
+                        "sibling",
+                        "index"
+                    ]
+                ],
+                "alphabetize": {
+                    "order": "asc",
+                    "ignoreCase": true
+                }
+            }
+        ]
+    }
+}
